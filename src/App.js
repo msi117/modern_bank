@@ -1,9 +1,32 @@
+import styles from "./style"
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 export default function App() {
   return (
     <div className="bg-primary w-full overflow-hidden">
-      <h1 className="text-4xl font-bold underline text-red-200">
-      Hello world!
-    </h1>
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.flexStart}`} >
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`} >
+        <div className={`${styles.boxWidth}`}>
+          Stats
+          Business
+          Billing
+
+        </div>
+      </div>
+
+
+
     </div>
   )
 }
